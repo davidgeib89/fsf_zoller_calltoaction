@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:fsf_zoller_calltoaction/Resources/Private/Language/locallang_db" date="2020-12-14T15:45:18Z" product-name="fsf_zoller_calltoaction">
+		<header/>
+		<body>
+			<trans-unit id="tx_fsfzollercalltoaction_domain_model_calltoaction" resname="tx_fsfzollercalltoaction_domain_model_calltoaction">
+				<source>Call To Action</source>
+			</trans-unit>
+			<trans-unit id="tx_fsf_zoller_calltoaction_zollercalltoaction.name" resname="tx_fsf_zoller_calltoaction_zollercalltoaction.name">
+				<source>Zoller Call to Action</source>
+			</trans-unit>
+			<trans-unit id="tx_fsf_zoller_calltoaction_zollercalltoaction.description" resname="tx_fsf_zoller_calltoaction_zollercalltoaction.description">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
