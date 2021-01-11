@@ -11,9 +11,86 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
+                    <settings.type>
+						<TCEforms>
+							<label>Anzeige Version</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<items type="array">
+                                    <numIndex index="0" type="array">
+										<numIndex index="0">Überschrift, Schriftzug, Button</numIndex>
+										<numIndex index="1">v2</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">Icon, Schriftzug, Button</numIndex>
+										<numIndex index="1">v1</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.type>
+                    <settings.color>
+						<TCEforms>
+							<label>Hintergrundfarbe</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">Grau</numIndex>
+										<numIndex index="1">grey</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">Weiß</numIndex>
+										<numIndex index="1">white</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.color>
+                    <settings.distance>
+						<TCEforms>
+							<label>Abstand nach Unten</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">normaler Abstand</numIndex>
+										<numIndex index="1">distance</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">kein Abstand</numIndex>
+										<numIndex index="1">nodistance</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.distance>
+                    <settings.svg>
+						<TCEforms>
+							<label>Icon</label>
+                            <displayCond>FIELD:settings.type:=:v1</displayCond>
+							<config>										
+								<type>group</type>
+								<internal_type>file</internal_type>
+								<allowed>svg, png, jpg</allowed>
+								<max_size>10000</max_size>
+								<uploadfolder>uploads/tx_fsfzollercalltoaction</uploadfolder>
+								<maxitems>1</maxitems>
+								<size>1</size>
+								<selectedliststyle>Width:180px</selectedliststyle>
+							</config>
+						</TCEforms>
+					</settings.svg>
                     <settings.headline>
                         <TCEforms>
                             <label>Überschrift</label>
+                            <displayCond>FIELD:settings.type:!=:v1</displayCond>
                             <config>
                                 <type>input</type>
                                 <eval>trim</eval>
@@ -23,11 +100,14 @@
                     </settings.headline>
                     <settings.text>
                     <TCEforms>
-                            <label>Unterüberschrift</label>
+                            <label>Text</label>
                             <config>
-                                <type>input</type>
-                                <eval>trim</eval>
-                                <size>230</size>
+                                <type>text</type>
+                                <rows>5</rows>
+                                <cols>30</cols>
+                                <eval>trim,required</eval>
+                                <enableRichtext>1</enableRichtext>
+                                <richtextConfiguration>default</richtextConfiguration>
                             </config>
                         </TCEforms>
                     </settings.text>
@@ -54,36 +134,6 @@
                             </config>
                         </TCEforms>
                     </settings.url1>
-                    <settings.img1>
-						<TCEforms>
-							<label>Hintergrund Bild</label>
-							<config>										
-								<type>group</type>
-								<internal_type>file</internal_type>
-								<allowed>gif, jpg,jpeg,png,csv</allowed>
-								<max_size>10000</max_size>
-								<uploadfolder>uploads/tx_fsfzollerheader</uploadfolder>
-								<maxitems>1</maxitems>
-								<size>1</size>
-								<selectedliststyle>Width:180px</selectedliststyle>
-							</config>
-						</TCEforms>
-					</settings.img1>
-                    <settings.video>
-							<TCEforms>
-								<label>Video/Animation</label>
-								<config>
-									<type>group</type>
-									<internal_type>file</internal_type>
-									<allowed>mp4</allowed>
-									<max_size>10000</max_size>
-									<uploadfolder>uploads/tx_fsfzollerheader</uploadfolder>
-									<maxitems>1</maxitems>
-									<size>1</size>
-									<selectedliststyle>Width:180px</selectedliststyle>
-								</config>
-							</TCEforms>
-						</settings.video>
                 </el>
             </ROOT>
         </sheet1>

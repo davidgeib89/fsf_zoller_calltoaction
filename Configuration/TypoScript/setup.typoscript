@@ -57,3 +57,14 @@ plugin.tx_fsfzollercalltoaction._CSS_DEFAULT_STYLE (
         color:green;
     }
 )
+
+
+page{
+	includeCSS{
+		fsfzollercalltoactioncss =  EXT:fsf_zoller_calltoaction/Resources/Public/css/fsf_zoller_calltoaction.css
+      
+	}
+	includeJSFooterlibs {
+        fsfzollercalltoactionjs =  EXT:fsf_zoller_calltoaction/Resources/Public/js/main.js
+    }
+}

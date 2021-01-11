@@ -1,36 +1,36 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default" />
+<div
+    class="fsf-zoller-calltoaction {f:if(condition: '{settings.distance} == \'nodistance\'', then: 'nodistance')} {f:if(condition: '{settings.color} == \'white\'', then: 'white')} {f:if(condition: '{settings.type} == \'v2\'', then: 'versiontwo')} {f:if(condition: '{settings.color} == \'grey\'', then: 'grey')}"
+>
+    <div class="container">
+        <f:if condition="{settings.type} == 'v1'">
+            <f:image
+                class="calltoaction-image"
+                src="/uploads/tx_fsfzollercalltoaction/{settings.svg}"
+            />
 
-This Template is responsible for creating a table of domain objects.
-
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        List.html: keep
-
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
-
-<f:section name="content">
-    <h1>Listing for CallToAction</h1>
-
-    <f:flashMessages />
-
-    <table  class="tx_fsfzollercalltoaction" >
-        <tr>
-            <th> </th>
-            <th> </th>
-        </tr>
-
-        <f:for each="{callToActions}" as="callToAction">
-            <tr>
-                <td><f:link.action action="edit" arguments="{callToAction : callToAction}">Edit</f:link.action></td>
-                <td><f:link.action action="delete" arguments="{callToAction : callToAction}">Delete</f:link.action></td>
-            </tr>
-        </f:for>
-    </table>
-
-    <f:link.action action="new">New CallToAction</f:link.action>
-</f:section>
-</html>
+            <div class="text">
+                <f:format.html>{settings.text}</f:format.html>
+            </div>
+            <f:if condition="{settings.buttontext1}">
+                <f:link.typolink parameter="{settings.url1}" target="_blank">
+                    <button class="btn btn-yellow">
+                        {settings.buttontext1}
+                    </button>
+                </f:link.typolink>
+            </f:if>
+        </f:if>
+        <f:if condition="{settings.type} == 'v2'">
+            <h1>{settings.headline}</h1>
+            <div class="text">
+                <f:format.html>{settings.text}</f:format.html>
+            </div>
+            <f:if condition="{settings.buttontext1}">
+                <f:link.typolink parameter="{settings.url1}" target="_blank">
+                    <button class="btn btn-yellow">
+                        {settings.buttontext1}
+                    </button>
+                </f:link.typolink>
+            </f:if>
+        </f:if>
+    </div>
+</div>
