@@ -41,7 +41,7 @@ call_user_func(
 			$iconRegistry->registerIcon(
 				'fsf_zoller_calltoaction-plugin-zollercalltoaction',
 				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-				['source' => 'EXT:fsf_zoller_calltoaction/Resources/Public/Icons/user_plugin_zollercalltoaction.svg']
+				['source' => 'EXT:fsf_zoller_calltoaction/Resources/Public/Icons/zoller_z.svg']
 			);
 		
     }

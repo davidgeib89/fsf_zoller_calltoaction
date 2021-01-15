@@ -3,10 +3,12 @@
 >
     <div class="container">
         <f:if condition="{settings.type} == 'v1'">
+            <f:if condition="{settings.svg}">
             <f:image
                 class="calltoaction-image"
                 src="/uploads/tx_fsfzollercalltoaction/{settings.svg}"
             />
+            </f:if>
 
             <div class="text">
                 <f:format.html>{settings.text}</f:format.html>
