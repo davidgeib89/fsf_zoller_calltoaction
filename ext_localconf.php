@@ -24,7 +24,7 @@ call_user_func(
                     elements {
                         zollercalltoaction {
                             iconIdentifier = fsf_zoller_calltoaction-plugin-zollercalltoaction
-                            title = LLL:EXT:fsf_zoller_calltoaction/Resources/Private/Language/locallang_db.xlf:tx_fsf_zoller_calltoaction_zollercalltoaction.name
+                            title = Call to Action
                             description = LLL:EXT:fsf_zoller_calltoaction/Resources/Private/Language/locallang_db.xlf:tx_fsf_zoller_calltoaction_zollercalltoaction.description
                             tt_content_defValues {
                                 CType = list
