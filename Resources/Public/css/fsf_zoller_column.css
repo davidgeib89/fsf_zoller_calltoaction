@@ -1,0 +1,13 @@
+.fsf-zoller-calltoaction {
+    margin-bottom: 150px;
+}
+
+
+
+@media (max-width: 1200px) {
+    .fsf-zoller-calltoaction {
+        margin-bottom: 30px;
+    }
+    
+}
+
