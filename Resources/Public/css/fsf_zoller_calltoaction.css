@@ -1,61 +1,102 @@
 .fsf-zoller-calltoaction {
-    margin-bottom: 150px!important;
-    padding:50px;
-    padding-bottom:65px;
+    margin-bottom: 150px !important;
+    padding: 0px;
+    padding-bottom: 56px;
+    padding-top: 38px;
+    background-color: black;
+    min-height: 310px;
+}
+
+.fsf-zoller-calltoaction .container-fluid {
+    padding: 0;
 }
 
 .fsf-zoller-calltoaction.nodistance {
-    margin-bottom: 0!important;
+    margin-bottom: 0 !important;
 }
 
 .fsf-zoller-calltoaction.grey {
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
+    padding-top: 105px;
+    padding-bottom: 113px;
 }
 
 .fsf-zoller-calltoaction .calltoaction-image {
-    display:block;
-    margin:0 auto;
-    margin-bottom:20px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .fsf-zoller-calltoaction .text {
-    font-size: 1.5rem;
+    font-size: 32px;
+    line-height: 44px;
+    color: white;
     text-align: center;
     font-weight: bold;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+}
+
+.fsf-zoller-calltoaction.grey .text {
+    color: black;
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 500;
+    margin-bottom: 58px;
+    max-width: 100%;
 }
 
 .fsf-zoller-calltoaction .btn {
-    display:block;
-    margin:0 auto;
+    display: block;
+    margin: 0 auto;
     max-width: 100%;
     height: auto;
 }
 
 .fsf-zoller-calltoaction.versiontwo h2 {
-    font-size:2.5rem;
-    font-weight: bold;
+    font-size: 100px;
+    line-height: 100px;
+    font-weight: 500;
     text-align: center;
-    margin-bottom:20px;
+    margin-bottom: 16px;
+    color: black;
 }
 
 .fsf-zoller-calltoaction.versiontwo .text {
-   font-weight: normal;
+    font-weight: normal;
 }
 
-
+.fsf-zoller-calltoaction .calltoaction-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 
 @media (max-width: 1200px) {
     .fsf-zoller-calltoaction {
         margin-bottom: 30px;
         padding: 50px;
-        padding-bottom: 65px;
+        padding-bottom: 0;
         padding-left: 20px;
         padding-right: 20px;
     }
 
     .fsf-zoller-calltoaction.nodistance {
-        margin-bottom: 0!important;
+        margin-bottom: 0 !important;
     }
-    
+    .fsf-zoller-calltoaction .calltoaction-icon {
+        position: relative;
+        right: inherit;
+        top: inherit;
+        display: block;
+        margin: 0 auto;
+    }
+    .fsf-zoller-calltoaction .text {
+        font-size: 32px;
+        line-height: 44px;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+    }
 }
-

@@ -1,38 +1,72 @@
 <div
-    class="fsf-zoller-calltoaction {f:if(condition: '{settings.distance} == \'nodistance\'', then: 'nodistance')} {f:if(condition: '{settings.color} == \'white\'', then: 'white')} {f:if(condition: '{settings.type} == \'v2\'', then: 'versiontwo')} {f:if(condition: '{settings.color} == \'grey\'', then: 'grey')}"
+    class="
+        fsf-zoller-calltoaction
+        {f:if(condition:
+        '{settings.distance}
+        ==
+        \'nodistance\'',
+        then:
+        'nodistance')}
+        {f:if(condition:
+        '{settings.color}
+        ==
+        \'white\'',
+        then:
+        'white')}
+        {f:if(condition:
+        '{settings.type}
+        ==
+        \'v2\'',
+        then:
+        'versiontwo')}
+        {f:if(condition:
+        '{settings.color}
+        ==
+        \'grey\'',
+        then:
+        'grey')}
+    "
 >
-    <div class="container">
-        <f:if condition="{settings.type} == 'v1'">
-            <f:if condition="{settings.svg}">
-            <f:image
-                class="calltoaction-image"
-                src="/uploads/tx_fsfzollercalltoaction/{settings.svg}"
-            />
-            </f:if>
+    <div class="container-fluid">
+        <div class="container">
+            <f:if condition="{settings.type} == 'v1'">
+                <f:if condition="{settings.svg}">
+                    <f:image
+                        class="calltoaction-image"
+                        src="/uploads/tx_fsfzollercalltoaction/{settings.svg}"
+                    />
+                </f:if>
 
-            <div class="text">
-                <f:format.html>{settings.text}</f:format.html>
-            </div>
-            <f:if condition="{settings.buttontext1}">
-                <f:link.typolink parameter="{settings.url1}">
-                    <button class="btn btn-yellow">
-                        {settings.buttontext1}
-                    </button>
-                </f:link.typolink>
+                <div class="text">
+                    <f:format.html>{settings.text}</f:format.html>
+                </div>
+                <f:if condition="{settings.buttontext1}">
+                    <f:link.typolink parameter="{settings.url1}">
+                        <button class="btn btn-yellow">
+                            {settings.buttontext1}
+                        </button>
+                    </f:link.typolink>
+                </f:if>
             </f:if>
-        </f:if>
-        <f:if condition="{settings.type} == 'v2'">
-            <h2>{settings.headline}</h2>
-            <div class="text">
-                <f:format.html>{settings.text}</f:format.html>
-            </div>
-            <f:if condition="{settings.buttontext1}">
-                <f:link.typolink parameter="{settings.url1}" >
-                    <button class="btn btn-yellow">
-                        {settings.buttontext1}
-                    </button>
-                </f:link.typolink>
+            <f:if condition="{settings.type} == 'v2'">
+                <h2>{settings.headline}</h2>
+                <div class="text">
+                    <f:format.html>{settings.text}</f:format.html>
+                </div>
+                <f:if condition="{settings.buttontext1}">
+                    <f:link.typolink parameter="{settings.url1}">
+                        <button class="btn btn-yellow">
+                            {settings.buttontext1}
+                        </button>
+                    </f:link.typolink>
+                </f:if>
             </f:if>
+        </div>
+        <f:if condition="{settings.iconright}">
+            <img
+                class="calltoaction-icon"
+                src="/typo3conf/ext/fsf_zoller_calltoaction/Resources/Public/Icons/call-to-action-icon.png"
+            />
         </f:if>
     </div>
 </div>

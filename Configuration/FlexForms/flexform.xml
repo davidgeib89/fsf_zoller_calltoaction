@@ -44,13 +44,22 @@
 										<numIndex index="1">grey</numIndex>
 									</numIndex>
 									<numIndex index="1" type="array">
-										<numIndex index="0">Weiß</numIndex>
+										<numIndex index="0">Schwarz</numIndex>
 										<numIndex index="1">white</numIndex>
 									</numIndex>
 								</items>
 							</config>
 						</TCEforms>
 					</settings.color>
+					<settings.iconright>
+                        <TCEforms>
+                            <label>Icon rechts einblenden</label>
+                            <config>
+                                <type>check</type>
+                                <default>0</default>
+                            </config>
+                        </TCEforms>
+                    </settings.iconright>
                     <settings.distance>
 						<TCEforms>
 							<label>Abstand nach Unten</label>
